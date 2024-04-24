@@ -32,7 +32,7 @@ module.exports = {
           return api.sendMessage('Please provide a prompt for the llama.', event.threadID, event.messageID);
         }
 
-        const apiUrl = `https://llama.august-api.repl.co/llama?prompt=${encodeURIComponent(prompt.join(' '))}`;
+        const apiUrl = `https://69070.replit.app/meta?prompt=${encodeURIComponent(prompt.join(' '))}`;
 
         // Make a GET request to the API for llama-like responses
         const response = await axios.get(apiUrl);
