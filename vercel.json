@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "env": {},
+  "builds": [
+    {
+      "src": "index.js", // Chemin vers votre fichier index.js du backend
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["index.js", "session.js"] } // Inclure les fichiers nécessaires du backend
+    },
+    {
+      "src": "public/**/*", // Chemin vers tous les fichiers dans le dossier public
+      "use": "@vercel/static",
+      "config": { "includeFiles": ["public/**/*"] } // Inclure tous les fichiers publics
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "public/index.html" // Chemin vers votre fichier index.html pour la page d'accueil
+    },
+    {
+      "src": "/(.+)",
+      "dest": "public/$1" // Chemin générique pour les autres fichiers de l'interface utilisateur
+    }
+  ]
+}
