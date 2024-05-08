@@ -4,13 +4,11 @@
   "builds": [
     {
       "src": "index.js", // Chemin vers votre fichier index.js du backend
-      "use": "@vercel/node",
-
+      "use": "@vercel/node"
     },
     {
       "src": "public/**/*", // Chemin vers tous les fichiers dans le dossier public
-      "use": "@vercel/node",
-     
+      "use": "@vercel/static"
     }
   ],
   "routes": [
