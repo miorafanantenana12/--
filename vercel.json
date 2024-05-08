@@ -5,12 +5,12 @@
     {
       "src": "index.js", // Chemin vers votre fichier index.js du backend
       "use": "@vercel/node",
-      "config": { "includeFiles": ["index.js", "session.js"] } // Inclure les fichiers nécessaires du backend
+
     },
     {
       "src": "public/**/*", // Chemin vers tous les fichiers dans le dossier public
-      "use": "@vercel/static",
-      "config": { "includeFiles": ["public/**/*"] } // Inclure tous les fichiers publics
+      "use": "@vercel/node",
+     
     }
   ],
   "routes": [
